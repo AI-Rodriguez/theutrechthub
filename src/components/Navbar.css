@@ -1,0 +1,139 @@
+/* Navbar — mobile-first */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 16px 20px;
+  transition: all 0.3s ease;
+}
+
+.navbar--scrolled {
+  background: rgba(253, 248, 240, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.06);
+  padding: 12px 20px;
+}
+
+.navbar__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar__logo {
+  font-family: 'DM Serif Display', serif;
+  font-size: 20px;
+  color: var(--navy);
+  z-index: 1001;
+}
+
+/* Desktop links — hidden on mobile */
+.navbar__links {
+  display: none;
+  gap: 32px;
+}
+
+@media (min-width: 768px) {
+  .navbar__links {
+    display: flex;
+  }
+  .navbar__hamburger {
+    display: none !important;
+  }
+  .navbar {
+    padding: 20px 40px;
+  }
+  .navbar--scrolled {
+    padding: 14px 40px;
+  }
+}
+
+.navbar__link {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--navy);
+  transition: color 0.2s;
+  letter-spacing: 0.3px;
+}
+
+.navbar__link:hover {
+  color: var(--terracotta);
+}
+
+/* Hamburger button */
+.navbar__hamburger {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  z-index: 1001;
+}
+
+.navbar__hamburger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--navy);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.navbar__hamburger--open span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.navbar__hamburger--open span:nth-child(2) {
+  opacity: 0;
+}
+.navbar__hamburger--open span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Mobile menu overlay */
+.navbar__mobile {
+  position: fixed;
+  inset: 0;
+  background: var(--cream);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 1000;
+}
+
+.navbar__mobile--open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.navbar__mobile-link {
+  font-family: 'DM Serif Display', serif;
+  font-size: 28px;
+  color: var(--navy);
+  transition: color 0.2s;
+  opacity: 0;
+  transform: translateY(12px);
+}
+
+.navbar__mobile--open .navbar__mobile-link {
+  animation: fadeUp 0.4s ease forwards;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,157 @@
+/* Featured Listings — mobile-first */
+
+.listings {
+  padding: 60px 0;
+}
+
+@media (min-width: 768px) {
+  .listings {
+    padding: 80px 0;
+  }
+}
+
+.listings__header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.listings__subtitle {
+  font-size: 16px;
+  color: var(--warm-gray);
+}
+
+.listings__tabs {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.listings__tab {
+  padding: 10px 28px;
+  border-radius: 100px;
+  border: 2px solid var(--light-gray);
+  background: transparent;
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--warm-gray);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.listings__tab--active {
+  background: var(--navy);
+  color: white;
+  border-color: var(--navy);
+}
+
+.listings__tab:not(.listings__tab--active):hover {
+  border-color: var(--terracotta);
+  color: var(--terracotta);
+}
+
+.listings__content {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04);
+  overflow: hidden;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.listings__list {
+  display: flex;
+  flex-direction: column;
+}
+
+.listings__card {
+  padding: 20px 24px;
+  border-bottom: 1px solid var(--light-gray);
+  transition: background 0.2s;
+}
+
+.listings__card:hover {
+  background: rgba(253, 248, 240, 0.5);
+}
+
+.listings__card:last-child {
+  border-bottom: none;
+}
+
+.listings__card-top {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.listings__badge {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 3px 10px;
+  border-radius: 100px;
+}
+
+.listings__badge--new {
+  background: rgba(123, 158, 123, 0.12);
+  color: var(--sage);
+}
+
+.listings__badge--featured {
+  background: rgba(212, 160, 60, 0.12);
+  color: var(--golden);
+}
+
+.listings__badge--verified {
+  background: rgba(196, 102, 58, 0.1);
+  color: var(--terracotta);
+}
+
+.listings__posted {
+  font-size: 12px;
+  color: var(--warm-gray);
+}
+
+.listings__price {
+  font-family: 'DM Serif Display', serif;
+  font-size: 20px;
+  color: var(--navy);
+  margin-bottom: 4px;
+}
+
+.listings__card-title {
+  font-family: 'DM Serif Display', serif;
+  font-size: 18px;
+  color: var(--navy);
+  margin-bottom: 4px;
+}
+
+.listings__card-meta {
+  font-size: 13px;
+  color: var(--warm-gray);
+  margin-bottom: 12px;
+}
+
+.listings__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.listings__tag {
+  font-size: 11px;
+  font-weight: 500;
+  padding: 4px 12px;
+  border-radius: 100px;
+  background: var(--cream);
+  color: var(--navy);
+}
+
+.listings__footer {
+  padding: 20px;
+  text-align: center;
+  border-top: 1px solid var(--light-gray);
+}

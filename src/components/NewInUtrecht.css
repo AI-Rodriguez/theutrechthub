@@ -1,0 +1,90 @@
+/* New in Utrecht Guide — mobile-first */
+
+.guide {
+  padding: 60px 0;
+  background: white;
+}
+
+@media (min-width: 768px) {
+  .guide {
+    padding: 80px 0;
+  }
+}
+
+.guide__header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.guide__subtitle {
+  font-size: 16px;
+  color: var(--warm-gray);
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.guide__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+@media (min-width: 600px) {
+  .guide__grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+}
+
+@media (min-width: 960px) {
+  .guide__grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.guide__step {
+  display: flex;
+  gap: 16px;
+  padding: 24px;
+  background: var(--cream);
+  border-radius: 16px;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+}
+
+.guide__step:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+  border-color: var(--light-gray);
+}
+
+.guide__step-num {
+  width: 36px;
+  height: 36px;
+  min-width: 36px;
+  border-radius: 10px;
+  background: var(--terracotta);
+  color: white;
+  font-family: 'DM Serif Display', serif;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.guide__step-content {
+  flex: 1;
+}
+
+.guide__step-title {
+  font-family: 'DM Serif Display', serif;
+  font-size: 17px;
+  color: var(--navy);
+  margin-bottom: 6px;
+}
+
+.guide__step-desc {
+  font-size: 13px;
+  color: var(--warm-gray);
+  line-height: 1.6;
+}
