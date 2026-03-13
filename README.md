@@ -1,6 +1,6 @@
 # The Utrecht Hub
 
-**The go-to resource for internationals living, working, and connecting in Utrecht.**
+**The go-to resource for internationals living, working, and connecting in Utrecht and surrounding area.**
 
 🌐 **Live site:** [theutrechthub.netlify.app](https://theutrechthub.netlify.app) — 🚧 Under development
 

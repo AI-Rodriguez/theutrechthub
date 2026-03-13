@@ -16,7 +16,7 @@ export default function Hero() {
           Your Home Away<br />from Home
         </h1>
         <p className="hero__subtitle">
-          The go-to resource for internationals living, working, and connecting in Utrecht.
+          The go-to resource for internationals living, working, and connecting in Utrecht and surrounding area.
           <br />Trusted by 43,000+ community members.
         </p>
         <div className="hero__buttons">

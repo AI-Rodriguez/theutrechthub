@@ -10,7 +10,7 @@ export default function Footer() {
           <div className="footer__brand">
             <h3 className="footer__logo">The Utrecht Hub</h3>
             <p className="footer__tagline">
-              The go-to resource for internationals living, working, and connecting in Utrecht.
+              The go-to resource for internationals living, working, and connecting in Utrecht and surrounding area.
               Built by the community, for the community — since 2015.
             </p>
           </div>
