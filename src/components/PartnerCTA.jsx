@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react'
+import { Link } from 'react-router-dom'
 import './PartnerCTA.css'
 
 const STATS = [
@@ -48,9 +49,9 @@ export default function PartnerCTA() {
               </div>
             ))}
           </div>
-          <a href="mailto:hello@theutrechthub.com" className="btn-primary partner__btn">
+          <Link to="/partner" className="btn-primary partner__btn">
             Become a Partner →
-          </a>
+          </Link>
         </div>
       </div>
     </section>
